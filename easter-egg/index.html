@@ -45,5 +45,70 @@
       </svg>
     </div>
   </main>
+  <script src="js/hw.js"></script>
+  <script>
+    const panel = document.getElementsByTagName('nav')[0];
+    const secret = document.getElementsByClassName('secret')[0];
+    let secretCounter = 0;
+    function showEasterEgg(event) {
+        if(!event.ctrlKey){
+            return;
+        }else{
+            if(!event.altKey){
+                return;
+            }else{
+                  if(event.keyCode !== 84){
+                    return;
+                }else{
+                    panel.classList.toggle('visible');
+                }
+            }
+        }
+    }
+    document.addEventListener('keydown', showEasterEgg);
+    document.addEventListener('keyup', test);
+    function test(event) {
+        if(event.keyCode !== 89){
+            return;
+        }else{
+            console.log('Нажал Y');
+            if(event.keyCode !== 84){
+                return;
+            }else{
+                console.log('Нажал T');
+                if(event.keyCode !== 78){
+                    return;
+                }else{
+                    console.log('Нажал N');
+                    if(event.keyCode !== 74){
+                        return;
+                    }else{
+                        if(event.keyCode !== 75){
+                            return;
+                        }else{
+                            if(event.keyCode !== 74){
+                                return;
+                            }else{
+                                if(event.keyCode !== 85){
+                                    return;
+                                }else{
+                                    if(event.keyCode !== 66){
+                                        return;
+                                    }else{
+                                        if(event.keyCode !== 90){
+                                            return;
+                                        }else{
+                                            secret.classList.add('visible');
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  </script>
 </body>
 </html>
